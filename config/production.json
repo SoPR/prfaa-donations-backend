@@ -1,4 +1,14 @@
 {
     "host": "donation-commitments-app.feathersjs.com",
-    "port": "PORT"
+    "port": "PORT",
+    "levelup": {
+        "tableName": "donation_commitments",
+        "options": {
+            "dynamodb": {
+                "region": "DYNAMODB_REGION",
+                "secretAccessKey": "DYNAMODB_SECRET",
+                "accessKeyId": "DYNAMODB_ACCESS"
+            }
+        }
+    }
 }

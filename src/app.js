@@ -18,7 +18,7 @@ const middleware = require('./middleware');
 const services   = require('./services');
 const appHooks   = require('./app.hooks');
 
-const mongoose = require('./mongoose');
+const levelup = require('./levelup');
 
 const app = feathers();
 
@@ -36,7 +36,7 @@ app.use('/', feathers.static(app.get('public')));
 
 // Set up Plugins and providers
 app.configure(hooks());
-app.configure(mongoose);
+app.configure(levelup);
 app.configure(rest());
 app.configure(socketio());
 

@@ -9,7 +9,7 @@ module.exports = {
         get:    [],
         create: [validatDonationOffer(), setDonationState()],
         update: [validatDonationOffer()],
-        patch:  [validatDonationOffer()],
+        patch:  [],
         remove: []
     },
 

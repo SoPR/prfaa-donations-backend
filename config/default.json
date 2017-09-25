@@ -6,5 +6,10 @@
         "default": 10,
         "max": 50
     },
-    "mongodb": "mongodb://localhost:27017/donation_commitments"
+    "levelup": {
+        "tableName": "../donationCommitments",
+        "options": {
+            "valueEncoding": "json"
+        }
+    }
 }

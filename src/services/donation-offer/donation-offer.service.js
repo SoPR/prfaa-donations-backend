@@ -1,17 +1,15 @@
 // Initializes the `donationOffer` service on path `/donation-offer`
-const createService = require('feathers-mongoose');
-const createModel   = require('../../models/donation-offer.model');
+const createService = require('feathers-levelup');
 const hooks         = require('./donation-offer.hooks');
 const filters       = require('./donation-offer.filters');
 
 module.exports = function () {
     const app      = this;
-    const Model    = createModel(app);
     const paginate = app.get('paginate');
 
     const options = {
-        name: 'donation-offer',
-        Model,
+        db:        app.get('levelupDb'),
+        sortField: '_createdAt',
         paginate
     };
 
