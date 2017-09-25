@@ -1,11 +1,13 @@
 const validatDonationOffer = require('../../hooks/validate-donation-offer');
 
+const setDonationState = require('../../hooks/set-donation-state');
+
 module.exports = {
     before: {
         all:    [],
         find:   [],
         get:    [],
-        create: [validatDonationOffer()],
+        create: [validatDonationOffer(), setDonationState()],
         update: [validatDonationOffer()],
         patch:  [validatDonationOffer()],
         remove: []

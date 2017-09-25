@@ -6,8 +6,9 @@ module.exports = function (app) {
     const mongooseClient = app.get('mongooseClient');
     const {Schema}       = mongooseClient;
     const donationOffer  = new Schema({
-        email:     {type: String, index: true, unique: true},
+        email:     {type: String, index: true, unique: false},
         offers:    [],
+        state:     {type: String},
         createdAt: {type: Date, default: Date.now},
         updatedAt: {type: Date, default: Date.now}
     });
