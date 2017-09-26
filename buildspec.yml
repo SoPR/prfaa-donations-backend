@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 
 phases:
   install:
@@ -6,10 +6,10 @@ phases:
       - echo Build started on `date`
       - echo Installing required libs...
       - npm install -g mocha yarn
-  build:
+  pre_build:
     commands:
       - yarn install
-  test:
+  build:
     commands:
       - mocha
   post_build:
