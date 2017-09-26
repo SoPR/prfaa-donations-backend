@@ -1,0 +1,8 @@
+Dear {{name}}:
+        Thank you for your offer to make the following donation to PRFAA.
+        Please confirm the information below, which details the donation you are offering.
+
+        Click here to confirm the above information: {{confirmationLink}}{{confirmationCode}}
+
+        Thank you for your support!
+        PRFAA

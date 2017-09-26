@@ -18,7 +18,9 @@ const middleware = require('./middleware');
 const services   = require('./services');
 const appHooks   = require('./app.hooks');
 
-const levelup = require('./levelup');
+const levelup    = require('./levelup');
+const aws        = require('./aws');
+const nodemailer = require('./nodemailer');
 
 const app = feathers();
 
@@ -37,6 +39,8 @@ app.use('/', feathers.static(app.get('public')));
 // Set up Plugins and providers
 app.configure(hooks());
 app.configure(levelup);
+app.configure(aws);
+app.configure(nodemailer);
 app.configure(rest());
 app.configure(socketio());
 

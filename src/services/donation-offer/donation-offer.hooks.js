@@ -1,13 +1,14 @@
-const validatDonationOffer = require('../../hooks/validate-donation-offer');
-
-const setDonationState = require('../../hooks/set-donation-state');
+const validatDonationOffer  = require('../../hooks/validate-donation-offer');
+const setDonationFields     = require('../../hooks/set-donation-create-fields');
+const sendEmailConfirmation = require('../../hooks/send-email-confirmation');
+const updateConfirmation    = require('../../hooks/update-confirmation');
 
 module.exports = {
     before: {
         all:    [],
         find:   [],
         get:    [],
-        create: [validatDonationOffer(), setDonationState()],
+        create: [validatDonationOffer(), setDonationFields()],
         update: [validatDonationOffer()],
         patch:  [],
         remove: []
@@ -17,7 +18,7 @@ module.exports = {
         all:    [],
         find:   [],
         get:    [],
-        create: [],
+        create: [updateConfirmation(), sendEmailConfirmation()],
         update: [],
         patch:  [],
         remove: []

@@ -11,5 +11,16 @@
         "options": {
             "valueEncoding": "json"
         }
-    }
+    },
+    "nodemailer": {
+        "options": {
+            "host": "NODEMAILER_HOST",
+            "port": 465,
+            "auth": {
+                "user": "NODEMAILER_USER",
+                "pass": "NODEMAILER_PASSWORD"
+            }
+        }
+    },
+    "linksUrl": "http://localhost:3050"
 }

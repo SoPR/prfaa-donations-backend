@@ -1,12 +1,12 @@
-const assert           = require('assert');
-const setDonationState = require('../../src/hooks/set-donation-create-fields');
+const assert               = require('assert');
+const confirmDonationOffer = require('../../src/hooks/confirm-donation-offer');
 
-describe('\'setDonationState\' hook', () => {
+describe('\'confirmDonationOffer\' hook', () => {
     it('runs the hook', () => {
         // A mock hook object
         const mock = {};
         // Initialize our hook with no options
-        const hook = setDonationState();
+        const hook = confirmDonationOffer();
 
         // Run the hook function (which returns a promise)
         // and compare the resulting hook object

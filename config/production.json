@@ -10,5 +10,11 @@
                 "accessKeyId": "DYNAMODB_ACCESS"
             }
         }
+    },
+    "nodemailer": {
+        "SES": true,
+        "options": {
+            "sendingRate": 1
+        }
     }
 }

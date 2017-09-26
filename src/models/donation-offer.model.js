@@ -5,11 +5,14 @@ module.exports = function (app) {
         id:         '/DonationOffer',
         type:       'object',
         properties: {
-            email:  {type: 'string'},
-            offers: {type: 'array', items: {type: 'string'}},
-            state:  {type: 'string'}
+            id:               {type: 'string'},
+            email:            {type: 'string'},
+            offers:           {type: 'array', items: {type: 'string'}},
+            isConfirmed:      {type: 'boolean'},
+            isVerified:       {type: 'boolean'},
+            confirmationCode: {type: 'string'}
         },
-        required:   ['email', 'state']
+        required:   ['id', 'email']
     };
 
     return donationOffer;

@@ -3,17 +3,13 @@
 const validator           = require('validator');
 const jsonschemaValidator = require('jsonschema').Validator;
 const v                   = new jsonschemaValidator();
-const donationOfferModel  = require('../models/donation-offer.model');
+const confirmModel        = require('../models/confirm.model');
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
-    return function validateDonationOffer(hook) {
+    return function validateConfirm(hook) {
         return new Promise((rsv, rej) => {
-            const data = hook.data;
-            if (data.email && !validator.isEmail(data.email)) {
-                return rej(new Error('Invalid email'));
-            }
-
-            const validate = v.validate(data, donationOfferModel);
+            const data     = hook.data;
+            const validate = v.validate(data, confirmModel);
 
             if (!validate.valid) {
                 return rej(new Error('Invalid data:', JSON.stringify(validate.errors)));

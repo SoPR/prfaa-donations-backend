@@ -36,6 +36,10 @@
   dependencies:
     "@types/node" "*"
 
+abbrev@1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.0.tgz#d0554c2256636e2f56e7c2e5ad183f859428d81f"
+
 abstract-leveldown@^2.6.1, abstract-leveldown@~2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-2.7.0.tgz#985052daf3d7d0ac0029dca8eb793f4cdd2a6834"
@@ -177,7 +181,7 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
-aws-sdk@^2.31.0:
+aws-sdk@^2.122.0, aws-sdk@^2.31.0:
   version "2.122.0"
   resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.122.0.tgz#d40980fdb24a07db166de91cb8813f0dc640d7c6"
   dependencies:
@@ -1220,6 +1224,19 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
+hogan.js@*:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/hogan.js/-/hogan.js-3.0.2.tgz#4cd9e1abd4294146e7679e41d7898732b02c7bfd"
+  dependencies:
+    mkdirp "0.3.0"
+    nopt "1.0.10"
+
+hogan@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hogan/-/hogan-1.0.2.tgz#d8d5e57fae0e7787b3e01e14256f9d588a23d1f0"
+  dependencies:
+    hogan.js "*"
+
 hpkp@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/hpkp/-/hpkp-2.0.0.tgz#10e142264e76215a5d30c44ec43de64dee6d1672"
@@ -1587,6 +1604,10 @@ minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
+mkdirp@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.3.0.tgz#1bbf5ab1ba827af23575143490426455f481fe1e"
+
 mkdirp@0.5.1, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
@@ -1645,6 +1666,12 @@ nodemailer@^4.1.0:
 noop-logger@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/noop-logger/-/noop-logger-0.1.1.tgz#94a2b1633c4f1317553007d8966fd0e841b6a4c2"
+
+nopt@1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-1.0.10.tgz#6ddd21bd2a31417b92727dd585f8a6f37608ebee"
+  dependencies:
+    abbrev "1"
 
 npmlog@^4.0.1:
   version "4.1.2"
