@@ -12,7 +12,8 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
                 .then((donationOffer) => {
                     if (!donationOffer.isConfirmed) {
                         donationOfferService.patch(confirm.donationId, {isConfirmed: true, isVerified: false})
-                            .then(() => {
+                            .then((donationOffer) => {
+                                confirm.donationOffer = donationOffer;
                                 return rsv(hook);
                             })
                             .catch(rej);

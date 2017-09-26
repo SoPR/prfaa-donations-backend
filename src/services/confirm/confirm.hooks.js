@@ -2,6 +2,8 @@ const validateConfirm = require('../../hooks/validate-confirm');
 
 const confirmDonationOffer = require('../../hooks/confirm-donation-offer');
 
+const sendEmailThankyou = require('../../hooks/send-email-thankyou');
+
 module.exports = {
     before: {
         all:    [],
@@ -16,7 +18,7 @@ module.exports = {
     after: {
         all:    [],
         find:   [],
-        get:    [confirmDonationOffer()],
+        get:    [confirmDonationOffer(), sendEmailThankyou()],
         create: [],
         update: [],
         patch:  [],
