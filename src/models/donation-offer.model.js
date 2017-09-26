@@ -5,12 +5,25 @@ module.exports = function (app) {
         id:         '/DonationOffer',
         type:       'object',
         properties: {
-            id:               {type: 'string'},
-            email:            {type: 'string'},
-            offers:           {type: 'array', items: {type: 'string'}},
-            isConfirmed:      {type: 'boolean'},
-            isVerified:       {type: 'boolean'},
-            confirmationCode: {type: 'string'}
+            id:                  {type: 'string'},
+            fullname:            {type: 'string'},
+            organizationType:    {type: 'string', enum: ['individual', 'corporation', 'ngo']},
+            organizationName:    {type: 'string'},
+            phoneNumber:         {type: 'string'},
+            email:               {type: 'string'},
+            donationCategories:  {
+                type: 'string',
+                enum: ['energy', 'foodWater', 'clothes', 'construction', 'telecommunications', 'transportation', 'search', 'other']
+            },
+            detailedDescription: {type: 'string'},
+            locationOfDonation:  {type: 'string'},
+            zipCode:             {type: 'string'},
+            transportationNeed:  {type: 'string', enum: ['yes', 'no']},
+            transportationType:  {type: 'string', enum: ['land', 'air', 'maritime', 'other']},
+            notes:               {type: 'string'},
+            isConfirmed:         {type: 'boolean'},
+            isVerified:          {type: 'boolean'},
+            confirmationCode:    {type: 'string'}
         },
         required:   ['id', 'email']
     };
