@@ -58,5 +58,6 @@
         "mocha": "^3.5.3",
         "request": "^2.82.0",
         "request-promise": "^4.2.2"
-    }
+    },
+    "license": "MIT"
 }
