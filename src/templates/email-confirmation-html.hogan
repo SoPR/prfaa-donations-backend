@@ -5,13 +5,56 @@
 </head>
 <body>
 <p>
-    Dear {{name}}:<br />
+    Dear {{fullname}}:<br />
     <br />
     Thank you for your offer to make the following donation to PRFAA. Please confirm the information below, which
     details the donation you are offering.
 </p>
 <table>
-
+    <tr>
+        <td>Donator type:</td>
+        <td>{{organizationType}}</td>
+    </tr>
+    {{#organizationName}}
+    <tr>
+        <td>Organization:</td>
+        <td>{{organizationName}}</td>
+    </tr>
+    {{/organizationName}}
+    <tr>
+        <td>Phone:</td>
+        <td>{{phoneNumber}}</td>
+    </tr>
+    <tr>
+        <td>Category:</td>
+        <td>{{donationCategory}}</td>
+    </tr>
+    <tr>
+        <td>Description:</td>
+        <td>{{detailedDescription}}</td>
+    </tr>
+    <tr>
+        <td>Location:</td>
+        <td>{{locationOfDonation}}</td>
+    </tr>
+    <tr>
+        <td>Zip:</td>
+        <td>{{zipCode}}</td>
+    </tr>
+    <tr>
+        <td>Needs tranported via:</td>
+        <td>{{transportationNeed}}</td>
+    </tr>
+    {{#transportationNeed}}
+    <tr>
+        <td>Transporation Type:</td>
+        <td>{{transportationType}}</td>
+    </tr>
+    {{/transportationNeed}}
+    <tr>
+        <td>Notes:</td>
+        <td>{{notes}}</td>
+    </tr>
 </table>
 <p>
     Click here to confirm the above information: <a href="{{confirmationLink}}{{confirmationCode}}">Confirm My

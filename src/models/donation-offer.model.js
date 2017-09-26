@@ -11,7 +11,7 @@ module.exports = function (app) {
             organizationName:    {type: 'string'},
             phoneNumber:         {type: 'string'},
             email:               {type: 'string'},
-            donationCategories:  {
+            donationCategory:    {
                 type: 'string',
                 enum: ['energy', 'foodWater', 'clothes', 'construction', 'telecommunications', 'transportation', 'search', 'other']
             },

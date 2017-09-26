@@ -1,8 +1,43 @@
-Dear {{name}}:
+Dear {{fullname}}:
         Thank you for your offer to make the following donation to PRFAA.
         Please confirm the information below, which details the donation you are offering.
 
-        Click here to confirm the above information: {{confirmationLink}}{{confirmationCode}}
+        Donator type:
+        {{organizationType}}
+
+        {{#organizationName}}
+        Organization:
+        {{organizationName}}
+        {{/organizationName}}
+
+        Phone:
+        {{phoneNumber}}
+
+        Category:
+        {{donationCategory}}
+
+        Description:
+        {{detailedDescription}}
+
+        Location:
+        {{locationOfDonation}}
+
+        Zip:
+        {{zipCode}}
+
+        Needs tranported via:
+        {{transportationNeed}}
+
+        {{#transportationNeed}}
+        Transporation Type:
+        {{transportationType}}
+        {{/transportationNeed}}
+
+        Notes:
+        {{notes}}
+
+
+        Visit this link to confirm the above information: {{confirmationLink}}{{confirmationCode}}
 
         Thank you for your support!
         PRFAA
