@@ -1,15 +1,13 @@
 {
-    "host": "donation-commitments-app.feathersjs.com",
-    "port": "PORT",
+    "host": "DonationBackendLB-1bjc8td-1643657227.us-east-1.elb.amazonaws.com",
+    "port": 3050,
+    "public": "../public/",
+    "paginate": {
+        "default": 10,
+        "max": 50
+    },
     "levelup": {
-        "tableName": "donation_commitments",
-        "options": {
-            "dynamodb": {
-                "region": "DYNAMODB_REGION",
-                "secretAccessKey": "DYNAMODB_SECRET",
-                "accessKeyId": "DYNAMODB_ACCESS"
-            }
-        }
+        "tableName": "donation_commitments"
     },
     "nodemailer": {
         "SES": true,
