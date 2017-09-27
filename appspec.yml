@@ -1,0 +1,23 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /opt/www/prfaa-donations-backend
+permissions:
+  - object: /opt/www/prfaa-donations-backend
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+hooks:
+  ApplicationStop:
+    - location: scripts/stop-app.sh
+      runas: ec2-user
+  BeforeInstall:
+    - location: scripts/install-nodejs.sh
+      runas: ec2-user
+  ApplicationStart:
+    - location: scripts/start-app.sh
+      runas: ec2-user
+  ValidateService:
+    - location: scripts/monitor-app.sh
+      runas: ec2-user
