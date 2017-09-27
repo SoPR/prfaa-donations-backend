@@ -4,7 +4,13 @@ const validateDonationOffer = require('../../src/hooks/validate-donation-offer')
 describe('\'validateDonationOffer\' hook', () => {
     it('runs the hook', () => {
         // A mock hook object
-        const mock = {};
+        const mock = {
+            data: {
+                email:       'user@example.com',
+                isConfirmed: false,
+                id:          '1506380088325:0:8a40ed47-8ba1-4dd4-8864-4b464fc05851'
+            }
+        };
         // Initialize our hook with no options
         const hook = validateDonationOffer();
 

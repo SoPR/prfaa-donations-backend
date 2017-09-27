@@ -4,7 +4,27 @@ const sendEmailThankyou = require('../../src/hooks/send-email-thankyou');
 describe('\'sendEmailThankyou\' hook', () => {
     it('runs the hook', () => {
         // A mock hook object
-        const mock = {};
+        const mock = {
+            app:    {
+                get: (name) => {
+                    switch (name) {
+                    case 'nodemailerService':
+                        return {
+                            sendMail: (obj, cb) => {
+                                return cb();
+                            }
+                        };
+                        break;
+                    case 'linksUrl':
+                        return;
+                        break;
+                    }
+                },
+            },
+            result: {
+                donationOffer: {}
+            }
+        };
         // Initialize our hook with no options
         const hook = sendEmailThankyou();
 

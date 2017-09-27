@@ -4,7 +4,25 @@ const sendEmailConfirmation = require('../../src/hooks/send-email-confirmation')
 describe('\'sendEmailConfirmation\' hook', () => {
     it('runs the hook', () => {
         // A mock hook object
-        const mock = {};
+        const mock = {
+            app:  {
+                get: (name) => {
+                    switch (name) {
+                    case 'nodemailerService':
+                        return {
+                            sendMail: (obj, cb) => {
+                                return cb();
+                            }
+                        };
+                        break;
+                    case 'linksUrl':
+                        return;
+                        break;
+                    }
+                },
+            },
+            data: {}
+        };
         // Initialize our hook with no options
         const hook = sendEmailConfirmation();
 
