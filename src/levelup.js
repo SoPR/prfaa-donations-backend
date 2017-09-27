@@ -1,4 +1,5 @@
 const levelup      = require('levelup');
+const sublevel     = require('level-sublevel');
 const DynamoDBDOWN = require('dynamodbdown');
 
 module.exports = function () {
@@ -10,7 +11,7 @@ module.exports = function () {
         options.db = DynamoDBDOWN;
     }
 
-    const db = levelup(config.tableName, config.options);
+    const db = sublevel(levelup(config.tableName, config.options));
 
     app.set('levelupDb', db);
 };
