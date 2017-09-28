@@ -8,7 +8,7 @@ module.exports = function () {
     const paginate = app.get('paginate');
 
     const options = {
-        db:        app.get('levelupDb').sublevel('donation-offers'),
+        db:        app.get('levelupDb'),
         sortField: '_createdAt',
         paginate
     };

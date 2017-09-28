@@ -424,6 +424,12 @@ bytewise-core@^1.2.2:
   dependencies:
     typewise-core "^1.2"
 
+bytewise@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/bytewise/-/bytewise-0.5.0.tgz#a48f9d47e65ae3f405aafe92ab065c8c36aebcad"
+  dependencies:
+    es6-shim ">=0.8"
+
 bytewise@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/bytewise/-/bytewise-1.1.0.tgz#1d13cbff717ae7158094aa881b35d081b387253e"
@@ -894,6 +900,10 @@ errno@~0.1.1:
   dependencies:
     prr "~0.0.0"
 
+es6-shim@>=0.8:
+  version "0.35.3"
+  resolved "https://registry.yarnpkg.com/es6-shim/-/es6-shim-0.35.3.tgz#9bfb7363feffff87a6cdb6cd93e405ec3c4b6f26"
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -961,6 +971,10 @@ espree@^3.5.1:
 esprima@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
+
+esprima@~1.0.3:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/esprima/-/esprima-1.0.4.tgz#9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
 
 esquery@^1.0.0:
   version "1.0.0"
@@ -1126,9 +1140,9 @@ feathers-hooks@^2.0.1, feathers-hooks@^2.0.2:
     feathers-commons "^0.8.6"
     uberproto "^1.2.0"
 
-feathers-levelup@^1.1.1:
+"feathers-levelup@https://github.com/nabeards/feathers-levelup.git":
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/feathers-levelup/-/feathers-levelup-1.1.1.tgz#a948f8bc4c49c6203aa669e173955c41916a1556"
+  resolved "https://github.com/nabeards/feathers-levelup.git#3bc4b177dcc116ddcb9f4e361d33e2dfe859612e"
   dependencies:
     feathers-errors "^2.0.1"
     feathers-query-filters "^2.0.0"
@@ -1136,6 +1150,17 @@ feathers-levelup@^1.1.1:
     lodash "^4.6.1"
     uberproto "^1.2.0"
     uuid "^2.0.1"
+
+"feathers-levelup@https://github.com/nabeards/feathers-levelup/archive/master.tar.gz":
+  version "1.1.1"
+  resolved "https://github.com/nabeards/feathers-levelup/archive/master.tar.gz#68dbdcf66778989123005275feea18a459f5890d"
+  dependencies:
+    feathers-errors "^2.0.1"
+    feathers-query-filters "^2.0.0"
+    levelup "^1.3.1"
+    lodash "^4.6.1"
+    uberproto "^1.2.0"
+    uuid "^3.0.1"
 
 feathers-query-filters@^2.0.0:
   version "2.1.2"
@@ -1812,6 +1837,12 @@ jschardet@^1.4.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-1.5.1.tgz#c519f629f86b3a5bedba58a88d311309eec097f9"
 
+json-literal-parse@~0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/json-literal-parse/-/json-literal-parse-0.0.0.tgz#21c36a5be243cad6afca709ffd01846e3b05048b"
+  dependencies:
+    esprima "~1.0.3"
+
 json-schema-traverse@^0.3.0:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-0.3.1.tgz#349a6d44c53a51de89b40805c5d5e59b417d3340"
@@ -1881,6 +1912,10 @@ level-errors@^1.0.3, level-errors@~1.0.3:
   dependencies:
     errno "~0.1.1"
 
+level-fix-range@~1.1:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/level-fix-range/-/level-fix-range-1.1.4.tgz#36f71cdc9a4ed3db105113a5b3e1a75c65f5b098"
+
 level-iterator-stream@~1.3.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/level-iterator-stream/-/level-iterator-stream-1.3.1.tgz#e43b78b1a8143e6fa97a4f485eb8ea530352f2ed"
@@ -1895,6 +1930,28 @@ level-post@~1.0.3:
   resolved "https://registry.yarnpkg.com/level-post/-/level-post-1.0.5.tgz#2a66390409bf6a1621a444bab6f016444cc9802c"
   dependencies:
     ltgt "^2.1.2"
+
+level-query@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/level-query/-/level-query-0.2.0.tgz#1bcc796c859b99488e16af5dcef1e96dd75336ab"
+  dependencies:
+    json-literal-parse "~0.0.0"
+    level-search "~1.5.0"
+    pathway "~0.1.2"
+    pull-level "~1.1.8"
+    pull-stream-to-stream "~1.2.6"
+    readable-stream "~1.0.2"
+    through "~2.3.4"
+
+level-search@~1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/level-search/-/level-search-1.5.0.tgz#709dd678985a36017a5cc3b0c61074dbaa854a9b"
+  dependencies:
+    bytewise "0.5.0"
+    pull-level "1.1.8"
+    pull-stream "2.20"
+    pull-stream-to-stream "~1.2.6"
+    safe-regex "~0.0.0"
 
 level-sublevel@^6.6.1:
   version "6.6.1"
@@ -2348,6 +2405,10 @@ path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
 
+pathway@~0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/pathway/-/pathway-0.1.2.tgz#1453ff5c187e6d1b5e1aab1171b0029f634d31be"
+
 performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
@@ -2459,9 +2520,29 @@ pseudomap@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
 
-pull-cat@^1.1.9:
+"pull-cat@>=1.1 <2", pull-cat@^1.1.9:
   version "1.1.11"
   resolved "https://registry.yarnpkg.com/pull-cat/-/pull-cat-1.1.11.tgz#b642dd1255da376a706b6db4fa962f5fdb74c31b"
+
+pull-core@1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/pull-core/-/pull-core-1.1.0.tgz#3d8127d6dac1475705c9800961f59d66c8046c8a"
+
+pull-core@~1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pull-core/-/pull-core-1.0.0.tgz#e0eb93918dfa70963ed09e36f63daa15b76b38a4"
+
+pull-level@1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/pull-level/-/pull-level-1.1.8.tgz#c48584f26334d031168d3f277ce455226eac0dec"
+  dependencies:
+    level-fix-range "~1.1"
+    level-post "~1.0.3"
+    pull-cat ">=1.1 <2"
+    pull-pushable "1"
+    pull-stream ">=2.20 <3"
+    pull-window ">=2.1.2 <3"
+    stream-to-pull-stream "1.2"
 
 pull-level@^2.0.3:
   version "2.0.3"
@@ -2475,6 +2556,17 @@ pull-level@^2.0.3:
     pull-window "^2.1.4"
     stream-to-pull-stream "^1.7.1"
 
+pull-level@~1.1.8:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/pull-level/-/pull-level-1.1.12.tgz#a67575778c99cd9fbd16aa516043045534cf19ee"
+  dependencies:
+    level-post "~1.0.3"
+    pull-cat ">=1.1 <2"
+    pull-pushable "1"
+    pull-stream ">=2.20 <3"
+    pull-window ">=2.1.2 <3"
+    stream-to-pull-stream "1.3"
+
 pull-live@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/pull-live/-/pull-live-1.0.1.tgz#a4ecee01e330155e9124bbbcf4761f21b38f51f5"
@@ -2482,15 +2574,39 @@ pull-live@^1.0.1:
     pull-cat "^1.1.9"
     pull-stream "^3.4.0"
 
+pull-pushable@1:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/pull-pushable/-/pull-pushable-1.1.4.tgz#7664d6741f72687ef5c89f533b78682f3de9a20e"
+  dependencies:
+    pull-stream "~2.18.2"
+
 pull-pushable@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/pull-pushable/-/pull-pushable-2.1.1.tgz#86666abbe3f5402f1f7ead03eefd69b785eca5b8"
+
+pull-stream-to-stream@~1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/pull-stream-to-stream/-/pull-stream-to-stream-1.2.6.tgz#dd9fa3732edb3d16e67cd1f224bca38a6d5748c7"
+  dependencies:
+    pull-core "1"
+
+pull-stream@2.20, "pull-stream@>=2.20 <3":
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-2.20.1.tgz#60ddc0a57366682b184a10d02426302978c1de44"
+  dependencies:
+    pull-core "~1.0.0"
 
 pull-stream@^3.2.3, pull-stream@^3.4.0, pull-stream@^3.4.5:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-3.6.1.tgz#c5c2ae4a51246efeebcc65c0412a3d725a92ce00"
 
-pull-window@^2.1.4:
+pull-stream@~2.18.2:
+  version "2.18.3"
+  resolved "https://registry.yarnpkg.com/pull-stream/-/pull-stream-2.18.3.tgz#7a07962234d7579c908860db8c27f7f34fd45000"
+  dependencies:
+    pull-core "~1.0.0"
+
+"pull-window@>=2.1.2 <3", pull-window@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/pull-window/-/pull-window-2.1.4.tgz#fc3b86feebd1920c7ae297691e23f705f88552f0"
   dependencies:
@@ -2562,9 +2678,9 @@ read@1.0.x:
   dependencies:
     mute-stream "~0.0.4"
 
-readable-stream@^1.0.33:
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
+readable-stream@^1.0.33, readable-stream@~1.0.2, readable-stream@~1.0.26:
+  version "1.0.34"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.1"
@@ -2582,15 +2698,6 @@ readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@^2.0.5, readable
     process-nextick-args "~1.0.6"
     string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
-
-readable-stream@~1.0.26:
-  version "1.0.34"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "0.0.1"
-    string_decoder "~0.10.x"
 
 readdirp@^2.0.0:
   version "2.1.0"
@@ -2724,6 +2831,10 @@ resumer@~0.0.0:
   dependencies:
     through "~2.3.4"
 
+ret@~0.1.6:
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
+
 revalidator@0.1.x:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/revalidator/-/revalidator-0.1.8.tgz#fece61bfa0c1b52a206bd6b18198184bdd523a3b"
@@ -2761,6 +2872,12 @@ safe-buffer@5.1.1, safe-buffer@^5.0.1, safe-buffer@^5.1.1, safe-buffer@~5.1.0:
 safe-buffer@~5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
+
+safe-regex@~0.0.0:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/safe-regex/-/safe-regex-0.0.1.tgz#350ae32b49b7dc75d1cac3a18cb8b375a94ef15c"
+  dependencies:
+    ret "~0.1.6"
 
 sax@1.2.1, sax@>=0.6.0:
   version "1.2.1"
@@ -2939,6 +3056,18 @@ stack-trace@0.0.x:
 stealthy-require@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
+
+stream-to-pull-stream@1.2:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/stream-to-pull-stream/-/stream-to-pull-stream-1.2.3.tgz#328263f5748ea7cdb256148c50cc521ef3a75067"
+  dependencies:
+    pull-core "~1.0.0"
+
+stream-to-pull-stream@1.3:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/stream-to-pull-stream/-/stream-to-pull-stream-1.3.1.tgz#f5be9be0f1e94bb3d1ae668bff8e9251b85a6c6e"
+  dependencies:
+    pull-core "~1.0.0"
 
 stream-to-pull-stream@^1.7.1:
   version "1.7.2"
@@ -3211,7 +3340,7 @@ uuid@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0, uuid@^3.1.0:
+uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.1.0.tgz#3dd3d3e790abc24d7b0d3a034ffababe28ebbc04"
 
