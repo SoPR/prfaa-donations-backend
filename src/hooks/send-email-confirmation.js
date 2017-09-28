@@ -38,7 +38,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
                         }
                     }, (err) => {
                         if (err) {
-                            return rej(err);
+                            return rej(new Error('env:' + process.env.NODE_ENV + ' ' + JSON.stringify(err)));
                         }
 
                         return rsv(hook);
