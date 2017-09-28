@@ -6,9 +6,13 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
         if (query.$search) {
             const search = query.$search;
+            const ignoredKeys = ['confirmationCode', '_createdAt', 'id'];
+
             query.$search = [];
             Object.keys(donationOffer.properties).forEach(doKey => {
-                query.$search.push({[doKey]: {$like: search}});
+                if (!ignoredKeys.includes(doKey)) {
+                    query.$search.push({[doKey]: {$like: search}});
+                }
             });
             Object.keys(query).forEach(qKey => {
                 if (qKey !== '$search') {
