@@ -7,7 +7,7 @@ module.exports = function () {
 
     let transporter = {};
 
-    if (options.SES) {
+    if (config.SES) {
         const aws   = app.get('awsService');
         transporter = nodemailer.createTransport({
             SES: new aws.SES({
