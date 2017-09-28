@@ -9,5 +9,8 @@ export NVM_DIR="$HOME/.nvm"
 cd /opt/www/prfaa-donations-backend
 yarn install
 
+# Set environment
+export NODE_ENV="production"
+
 # Start our app!
 forever start src/
