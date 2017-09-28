@@ -13,4 +13,4 @@ yarn install
 export NODE_ENV="production"
 
 # Start our app!
-forever start src/
+NODE_ENV=production forever start src/
