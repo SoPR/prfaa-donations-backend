@@ -5,8 +5,8 @@ module.exports = function () {
     const config = app.get('aws');
 
     if (config && config.ec2) {
+        aws.config.region      = 'us-east-1';
         aws.config.credentials = new aws.EC2MetadataCredentials({
-            region:            'us-east-1',
             httpOptions:       {timeout: 5000},
             maxRetries:        10,
             retryDelayOptions: {base: 200}
