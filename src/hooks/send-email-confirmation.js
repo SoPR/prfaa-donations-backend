@@ -36,7 +36,8 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
                         }
                     }, (err) => {
                         if (err) {
-                            return rej(err);
+                            const emailErr = new Error('Unable to send mail', transporter, err);
+                            return rej(emailErr);
                         }
 
                         return rsv(hook);
