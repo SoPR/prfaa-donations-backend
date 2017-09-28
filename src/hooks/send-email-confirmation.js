@@ -18,6 +18,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
                     const app              = hook.app;
                     const transporter      = app.get('nodemailerService');
                     const fromEmail        = app.get('fromEmail');
+                    const testToEmail      = app.get('testToEmail');
                     const confirmationLink = app.get('linksUrl') + '/confirm?id=';
                     const htmlEmail        = hogan.compile(htmlTemplate.toString());
                     const textEmail        = hogan.compile(textTemplate.toString());
@@ -25,7 +26,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
 
                     transporter.sendMail({
                         from:    fromEmail,
-                        to:      context.email,
+                        to:      testToEmail || context.email,
                         subject: 'Please confirm your donation offer to aid Puerto Rico',
                         text:    textEmail.render(context),
                         html:    htmlEmail.render(context),

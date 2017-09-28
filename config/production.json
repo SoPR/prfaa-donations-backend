@@ -15,5 +15,6 @@
             "sendingRate": 1
         }
     },
+    "testToEmail": "prfaatest@fastmail.com",
     "linksUrl": "http://donationfrontendlb-l4hv0wp-526303510.us-east-1.elb.amazonaws.com"
 }
