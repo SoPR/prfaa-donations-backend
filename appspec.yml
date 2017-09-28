@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /
     destination: /opt/www/prfaa-donations-backend
+  - source: /config/extra_keys
+    destination: /home/ec2-user/.ssh/
 permissions:
   - object: /opt/www/prfaa-donations-backend
     pattern: "**"
@@ -15,6 +17,8 @@ hooks:
   BeforeInstall:
     - location: scripts/install-nodejs.sh
       runas: ec2-user
+  AfterInstall:
+    - location: scripts/install-keys.sh
   ApplicationStart:
     - location: scripts/start-app.sh
       runas: ec2-user
