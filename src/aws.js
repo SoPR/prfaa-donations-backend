@@ -1,11 +1,9 @@
 const aws = require('aws-sdk');
 
 module.exports = function () {
-    const app    = this;
-    const config = app.get('aws');
+    const app = this;
 
-    if (config) {
-        aws.config(config);
+    if (aws.config && aws.config.credentials && aws.config.credentials.accessKeyId) {
         app.set('awsService', aws);
     }
 };
