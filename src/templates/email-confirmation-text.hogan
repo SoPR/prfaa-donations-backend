@@ -25,11 +25,8 @@ Dear {{fullname}}:
         Zip:
         {{zipCode}}
 
-        Needs tranported via:
-        {{transportationNeed}}
-
         {{#transportationNeed}}
-        Transporation Type:
+        Needs transported via:
         {{transportationType}}
         {{/transportationNeed}}
 

@@ -41,13 +41,9 @@
         <td>Zip:</td>
         <td>{{zipCode}}</td>
     </tr>
-    <tr>
-        <td>Needs tranported via:</td>
-        <td>{{transportationNeed}}</td>
-    </tr>
     {{#transportationNeed}}
     <tr>
-        <td>Transporation Type:</td>
+        <td>Needs transported via:</td>
         <td>{{transportationType}}</td>
     </tr>
     {{/transportationNeed}}
