@@ -14,5 +14,6 @@
         "options": {
             "sendingRate": 1
         }
-    }
+    },
+    "linksUrl": "http://donationfrontendlb-l4hv0wp-526303510.us-east-1.elb.amazonaws.com"
 }
