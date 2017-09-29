@@ -5,14 +5,16 @@ const updateConfirmation    = require('../../hooks/update-confirmation');
 
 const queryDonationOffer = require('../../hooks/query-donation-offer');
 
+const acceptOffer = require('../../hooks/accept-offer');
+
 module.exports = {
     before: {
         all:    [],
         find:   [queryDonationOffer()],
         get:    [],
         create: [validatDonationOffer(), setDonationFields()],
-        update: [validatDonationOffer()],
-        patch:  [],
+        update: [validatDonationOffer(), acceptOffer()],
+        patch:  [acceptOffer()],
         remove: []
     },
 

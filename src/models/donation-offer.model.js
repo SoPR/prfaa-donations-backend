@@ -23,7 +23,10 @@ module.exports = function (app) {
             notes:               {type: 'string'},
             isConfirmed:         {type: 'boolean'},
             isVerified:          {type: 'boolean'},
-            confirmationCode:    {type: 'string'}
+            confirmationCode:    {type: 'string'},
+            isAccepted:          {type: 'boolean'},
+            acceptedBy:          {type: 'string'},
+            acceptedDate:        {type: 'date'}
         },
         required:   ['id', 'email']
     };
