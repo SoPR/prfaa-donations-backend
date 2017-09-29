@@ -7,7 +7,7 @@
         "max": 50
     },
     "levelup": {
-        "tableName": "../donationCommitments",
+        "tableName": "donationCommitments",
         "options": {
             "valueEncoding": "json"
         }

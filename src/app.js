@@ -38,8 +38,8 @@ app.use('/', feathers.static(app.get('public')));
 
 // Set up Plugins and providers
 app.configure(hooks());
-app.configure(levelup);
 app.configure(aws);
+app.configure(levelup);
 app.configure(nodemailer);
 app.configure(rest());
 app.configure(socketio());
