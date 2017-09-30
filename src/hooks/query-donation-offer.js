@@ -3,7 +3,7 @@ const donationOffer = require('../models/donation-offer.model')();
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     return function queryDonationOffer(hook) {
         const query      = hook.params.query;
-        const isAccepted = !!query.isAccepted;
+        const isAccepted = query.isAccepted === 'true';
         // Specifying isAccepted=true in the query string forces accepted donation offers to be returned
 
         if (query.$search) {
@@ -26,9 +26,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
             Object.keys(query).forEach(key => query[key] = {$like: query[key]});
         }
 
-        if (!isAccepted) {
-            query.isAccepted = false;
-        }
+        query.isAccepted = isAccepted;
 
         return Promise.resolve(hook);
     };
