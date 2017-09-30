@@ -2,10 +2,12 @@ const donationOffer = require('../models/donation-offer.model')();
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     return function queryDonationOffer(hook) {
-        const query = hook.params.query;
+        const query      = hook.params.query;
+        const isAccepted = !!query.isAccepted;
+        // Specifying isAccepted=true in the query string forces accepted donation offers to be returned
 
         if (query.$search) {
-            const search = query.$search;
+            const search      = query.$search;
             const ignoredKeys = ['confirmationCode', '_createdAt', 'id'];
 
             query.$search = [];
@@ -22,6 +24,10 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
         }
         else {
             Object.keys(query).forEach(key => query[key] = {$like: query[key]});
+        }
+
+        if (!isAccepted) {
+            query.isAccepted = false;
         }
 
         return Promise.resolve(hook);

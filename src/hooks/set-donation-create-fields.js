@@ -6,8 +6,8 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
             const confirmService = app.service('confirm');
 
             data.isConfirmed = false;
-            delete data.isVerified;
-            delete data.isAccepted;
+            data.isVerified  = false;
+            data.isAccepted  = false;
             delete data.acceptedBy;
             delete data.acceptedDate;
 
