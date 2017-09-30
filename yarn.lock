@@ -1142,7 +1142,7 @@ feathers-hooks@^2.0.1, feathers-hooks@^2.0.2:
 
 "feathers-levelup@https://github.com/nabeards/feathers-levelup.git":
   version "1.1.1"
-  resolved "https://github.com/nabeards/feathers-levelup.git#95a9f2ee4da5657779122ae9d0b1c1fe7748a4ab"
+  resolved "https://github.com/nabeards/feathers-levelup.git#0e26857337ece628fa68181de7db2c34ebd28ce5"
   dependencies:
     feathers-errors "^2.0.1"
     feathers-query-filters "^2.0.0"
