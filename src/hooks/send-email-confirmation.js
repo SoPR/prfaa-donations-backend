@@ -12,8 +12,8 @@ const templates = {
         'header': fs.readFileSync('src/templates/partials/email-header.hogan', 'utf8'),
         'social-contact': fs.readFileSync('src/templates/partials/email-social-contact.hogan', 'utf8'),
         'styles': fs.readFileSync('src/templates/partials/email-styles.hogan', 'utf8'),
-    }
-}
+    },
+};
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     return function sendEmailConfirmation(hook) {
