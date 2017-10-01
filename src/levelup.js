@@ -8,7 +8,7 @@ module.exports = function () {
     const options = config.options;
     let db        = {};
 
-    if (config.dynamodb) {
+    if (config.store === 'dynamodb') {
         const aws        = app.get('awsService');
         options.db       = DynamoDBDOWN;
         options.dynamodb = aws.config.credentials;

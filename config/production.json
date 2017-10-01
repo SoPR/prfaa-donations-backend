@@ -7,21 +7,20 @@
         "max": 50
     },
     "levelup": {
-        "dynamodb": true,
+        "store": "dynamodb",
         "tableName": "donationCommitments",
         "options": {
             "valueEncoding": "json"
         }
     },
     "nodemailer": {
-        "SES": true,
+        "method": "SES",
         "options": {
             "sendingRate": 1
         }
     },
     "aws": {
-        "ec2": true
+        "credentials": "iam"
     },
-    "testToEmail": "prfaatest@fastmail.com",
-    "linksUrl": "http://donationfrontendlb-l4hv0wp-526303510.us-east-1.elb.amazonaws.com"
+    "linksUrl": "http://beta.prfaa.help"
 }

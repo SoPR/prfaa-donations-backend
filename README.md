@@ -1,3 +1,37 @@
+# Config
+Modify `default.json` for your current desired configuration settings.
+
+### Key: `"levelup"`
+#### Subkey: `"store"`
+Set to `"dynamodb"` if desired to use AWS dynamodb. *Requires* `"aws"` key info to work properly.
+
+
+### Key: `"nodemailer"`
+#### Subkey: `"method"`
+Set to `"SES"` if desired to use AWS Simple Email Service. *Requires* `"aws"` key info to work properly.
+
+#### Subkey: `"options"`
+Options specific to the method used for sending email.
+`"SES"` requires `"sendingRate"`
+`"SMTP"` requires `"host"`, `"port"`, `"secure"`, `"auth.user"`, and `"auth.path"`
+See [NodeMailer Docs](https://nodemailer.com/) for more info.
+
+
+### Key: `"aws"`
+Must be defined to use AWS resources.
+#### Subkey: `"credentials"`
+Set to `"file"` if loading credentials from `~/.aws/credentials`
+Set to `"iam"` if loading credentials from the IAM assigned to the running EC2 instance (default for production).
+
+
+### Key: `"fromEmail"`
+Email address as the "from" in generated emails
+
+
+### Key: `"testToEmail"`
+Force all emails to be sent to this address, ignoring the email address the correspondence would normally go to, e.g., the email address on the submitted donation form.
+
+---
 MIT License
 Copyright (c) 2017 Startups of Puerto Rico
 
