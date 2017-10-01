@@ -4,14 +4,14 @@ const templates = {
     html: fs.readFileSync('src/templates/email-thankyou-html.hogan', 'utf8'),
     text: fs.readFileSync('src/templates/email-thankyou-text.hogan', 'utf8'),
     partials: {
-      'body-close': fs.readFileSync('src/templates/partials/email-body-close.hogan', 'utf8'),
-      'body-open': fs.readFileSync('src/templates/partials/email-body-open.hogan', 'utf8'),
-      'footer': fs.readFileSync('src/templates/partials/email-footer.hogan', 'utf8'),
-      'header': fs.readFileSync('src/templates/partials/email-header.hogan', 'utf8'),
-      'social-contact': fs.readFileSync('src/templates/partials/email-social-contact.hogan', 'utf8'),
-      'styles': fs.readFileSync('src/templates/partials/email-styles.hogan', 'utf8'),
+        'body-close': fs.readFileSync('src/templates/partials/email-body-close.hogan', 'utf8'),
+        'body-open': fs.readFileSync('src/templates/partials/email-body-open.hogan', 'utf8'),
+        'footer': fs.readFileSync('src/templates/partials/email-footer.hogan', 'utf8'),
+        'header': fs.readFileSync('src/templates/partials/email-header.hogan', 'utf8'),
+        'social-contact': fs.readFileSync('src/templates/partials/email-social-contact.hogan', 'utf8'),
+        'styles': fs.readFileSync('src/templates/partials/email-styles.hogan', 'utf8'),
     },
-}
+};
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     return function sendEmailThankyou(hook) {
