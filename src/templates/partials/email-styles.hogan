@@ -85,7 +85,6 @@
 
     .header.container table td.logo { padding: 15px; }
     .header.container table td.label { padding: 15px; padding-left:0px;}
-    .header.container h5 { color: #FFF; }
 
 
     /* ------------------------------------- 
