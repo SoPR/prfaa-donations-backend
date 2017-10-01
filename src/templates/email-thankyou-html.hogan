@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <meta charset="utf-8" />
-</head>
-<body>
-<p>
-    Dear {{fullname}}:<br />
-    <br />
-    Thank you for confirming you donation offer to PRFAA. One of our team members will be in contact with you to arrange
-    further details.
-</p>
-<p>
-    Thank you again for your support!
-    PRFAA
-</p>
-</body>
+    {{> styles}}
+  </head>
+
+  <body bgcolor="#FFFFFF">
+    {{> header}}
+
+    {{!-- Hogan does not accept partial blocks,
+          so wrapping markup must be split. --}}
+    {{> body-open}}
+
+    <p class="lead">Dear {{fullname}}:</p>
+    <p>Thank you for confirming you donation offer to PRFAA. One of our team members will be in contact with you to arrange further details.</p>
+    <p>Thank you again for your support!<br />&mdash; PRFAA</p>
+
+    {{> social-contact}}
+    {{> body-close}}
+
+    {{> footer}}
+  </body>
+
 </html>
