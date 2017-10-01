@@ -1,0 +1,38 @@
+<!-- SOCIAL & CONTACT -->
+<table class="social" width="100%">
+  <tr>
+    <td>
+      <!-- column 1 -->
+      <table align="left" class="column">
+        <tr>
+          <td>				
+
+            <h5 class="">Connect with Us:</h5>
+            <p class=""><a href="#" class="soc-btn fb">Facebook</a> <a href="#" class="soc-btn tw">Twitter</a> <a href="#" class="soc-btn gp">Google+</a></p>
+
+
+          </td>
+        </tr>
+      </table><!-- /column 1 -->	
+
+      <!-- column 2 -->
+      <table align="left" class="column">
+        <tr>
+          <td>				
+
+            <h5 class="">Contact Info:</h5>												
+            <p>
+              Office Number: <strong>(202) 778-0710</strong><br/>
+              Fax Number: <strong>(202) 778-0721</strong><br/>
+              General Inquiries: <strong><a href="emailto:info@prfaa.pr.gov">info@prfaa.pr.gov</a></strong>
+            </p>
+
+          </td>
+        </tr>
+      </table><!-- /column 2 -->
+
+      <span class="clear"></span>	
+
+    </td>
+  </tr>
+</table><!-- /SOCIAL & CONTACT -->
