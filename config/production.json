@@ -22,5 +22,5 @@
     "aws": {
         "credentials": "iam"
     },
-    "linksUrl": "http://beta.prfaa.help"
+    "frontendUrl": "http://beta.prfaa.help"
 }

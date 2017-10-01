@@ -24,9 +24,15 @@ const nodemailer = require('./nodemailer');
 
 const app = feathers();
 
+const corsOptions = {
+    origin:               app.get('frontendUrl'),
+    optionsSuccessStatus: 200 // overrides 204 response for older browsers
+};
+
 // Load app configuration
 app.configure(configuration());
 // Enable CORS, security, compression, favicon and body parsing
+app.options(corsOptions, cors());
 app.use(cors());
 app.use(helmet());
 app.use(compress());
