@@ -1,6 +1,5 @@
 // Use this hook to manipulate incoming or outgoing data.
 // For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
-const validator           = require('validator');
 const jsonschemaValidator = require('jsonschema').Validator;
 const v                   = new jsonschemaValidator();
 const confirmModel        = require('../models/confirm.model');
