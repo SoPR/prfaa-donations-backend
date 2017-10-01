@@ -13,7 +13,7 @@
           so wrapping markup must be split. --}}
     {{> body-open}}
 
-    <h2>Dear {{fullname}}:</h2>
+    <p class="lead">Dear {{fullname}}:</p>
     <p>Thank you for confirming you donation offer to PRFAA. One of our team members will be in contact with you to arrange further details.</p>
     <p>Thank you again for your support!<br />&mdash; PRFAA</p>
 
