@@ -23,5 +23,37 @@
         }
     },
     "fromEmail": "prfaatest@fastmail.com",
-    "frontendUrl": "http://localhost:3000"
+    "frontendUrl": "http://localhost:3000",
+    "aws": {
+        "credentials": "file"
+    },
+    "secureConfig": {
+        "type": "s3",
+        "bucket": "prfaa.help",
+        "path": "secure.json"
+    },
+    "authentication": {
+        "secret": "4a74da1f18aacba83cc94c338215d09429c7bbd55c0df0b122c06d1558425e4bf05a91dbe22bead4e60d4caec5643fe85fe2d90b9e53afb7c9b49fd94edea45566cffd2da5131a0173039e669a0bb7f23d4f64b63c840039914097c3d654678d240fe810da0d0c9e3ebe516b8579d5fad872d3205f4b497d0e84eebcdb824e7b03c29eea489ce0a1ffb93a230b5a5aed70bca5a37f01c1d7cecfeea0b7461c2d7edfef5f33442fcd5b8098dc64768af630344a16ccaffeab76dca48a1645bf66616e24319ce8719db9b457ce53073d9fb453f54dd6a3ffb7bd33c0889e8267180296ab3d09fffa53b97e807e88e1599ca48ef1655566c111d6534354d1f64c4b",
+        "strategies": [
+            "jwt",
+            "local"
+        ],
+        "path": "/authentication",
+        "service": "users",
+        "jwt": {
+            "header": {
+                "type": "access"
+            },
+            "audience": "https://yourdomain.com",
+            "subject": "anonymous",
+            "issuer": "feathers",
+            "algorithm": "HS256",
+            "expiresIn": "1d"
+        },
+        "local": {
+            "entity": "user",
+            "usernameField": "username",
+            "passwordField": "password"
+        }
+    }
 }

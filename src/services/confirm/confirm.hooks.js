@@ -1,18 +1,17 @@
-const validateConfirm = require('../../hooks/validate-confirm');
-
+const validateConfirm      = require('../../hooks/validate-confirm');
 const confirmDonationOffer = require('../../hooks/confirm-donation-offer');
-
-const sendEmailThankyou = require('../../hooks/send-email-thankyou');
+const sendEmailThankyou    = require('../../hooks/send-email-thankyou');
+const {disallow}           = require('feathers-hooks-common');
 
 module.exports = {
     before: {
         all:    [],
-        find:   [],
+        find:   [disallow],
         get:    [],
         create: [validateConfirm()],
         update: [],
-        patch:  [],
-        remove: []
+        patch:  [disallow],
+        remove: [disallow]
     },
 
     after: {

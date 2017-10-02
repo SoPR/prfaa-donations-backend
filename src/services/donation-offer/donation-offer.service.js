@@ -8,13 +8,15 @@ module.exports = function () {
     const paginate = app.get('paginate');
 
     const options = {
-        db:        app.get('levelupDb'),
+        db:        app.get('levelupDb').sublevel('donationOffers'),
         sortField: '_createdAt',
         paginate
     };
 
     // Initialize our service with any options it requires
-    app.use('/donation-offer', createService(options));
+    const Service = createService(options);
+    Service.id    = 'id';
+    app.use('/donation-offer', Service);
 
     // Get our initialized service so that we can register hooks and filters
     const service = app.service('donation-offer');
