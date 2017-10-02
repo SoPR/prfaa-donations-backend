@@ -22,7 +22,7 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
             const transporter      = app.get('nodemailerService');
             const fromEmail        = app.get('fromEmail');
             const testToEmail      = app.get('testToEmail');
-            const confirmationLink = app.get('linksUrl') + '/confirm?id=';
+            const confirmationLink = app.get('frontendUrl') + '/confirm?id=';
             const htmlEmail        = hogan.compile(templates.html);
             const textEmail        = hogan.compile(templates.text);
             const context          = Object.assign({confirmationLink: confirmationLink}, hook.data);

@@ -111,3 +111,4 @@ $RECYCLE.BIN/
 lib/
 data/
 donationCommitments/
+config/secure.json

@@ -14,7 +14,7 @@ describe('\'sendEmailThankyou\' hook', () => {
                                 return cb();
                             }
                         };
-                    case 'linksUrl':
+                    case 'frontendUrl':
                         return;
                     }
                 },

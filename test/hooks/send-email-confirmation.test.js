@@ -14,7 +14,7 @@ describe('\'sendEmailConfirmation\' hook', () => {
                                 return cb();
                             }
                         };
-                    case 'linksUrl':
+                    case 'frontendUrl':
                         return;
                     }
                 },
