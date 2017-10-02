@@ -17,13 +17,17 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
                 }
             });
             Object.keys(query).forEach(qKey => {
-                if (qKey !== '$search') {
+                if (qKey.charAt(0) !== '$') {
                     delete query[qKey];
                 }
             });
         }
         else {
-            Object.keys(query).forEach(key => query[key] = {$like: query[key]});
+            Object.keys(query).forEach(key => {
+                if (key.charAt(0) !== '$') {
+                    query[key] = {$like: query[key]};
+                }
+            });
         }
 
         query.isAccepted = isAccepted;
