@@ -16,7 +16,7 @@ describe('\'confirmDonationOffer\' hook', () => {
                     patch: (id, keysToUpdate) => {
                         if (id === mockOffer.id) {
                             const mockOfferUpdate = Object.assign(mockOffer, keysToUpdate);
-                            if ((!mockOfferUpdate.isConfirmed) || (mockOfferUpdate.isVerified)) {
+                            if (!mockOfferUpdate.isConfirmed) {
                                 return Promise.reject(new Error('incorrect keys set'));
                             }
 

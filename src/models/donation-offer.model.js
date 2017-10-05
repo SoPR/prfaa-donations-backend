@@ -22,7 +22,6 @@ module.exports = function (app) {
             transportationType:  {type: 'string', enum: ['land', 'air', 'maritime', 'other']},
             notes:               {type: 'string'},
             isConfirmed:         {type: 'boolean'},
-            isVerified:          {type: 'boolean'},
             confirmationCode:    {type: 'string'},
             isAccepted:          {type: 'boolean'},
             acceptedBy:          {type: 'string'},
