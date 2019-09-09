@@ -1,0 +1,77 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - feathers > express > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers > express > serve-static > send > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-hooks-common > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication-local > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication-hooks > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers > express > send > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-hooks-common > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-levelup > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-rest > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication-jwt > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-socketio > feathers-socket-commons > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication > feathers-socket-commons > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication > feathers-authentication-client > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication-local > feathers-errors > debug:
+        patched: '2019-06-15T05:06:08.317Z'
+  'npm:extend:20180424':
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > request > extend:
+        patched: '2019-06-15T05:06:08.317Z'
+  'npm:hoek:20180212':
+    - feathers-authentication-jwt > passport-jwt > jsonwebtoken > joi > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication-jwt > passport-jwt > jsonwebtoken > joi > topo > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > request > hawk > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > request > hawk > sntp > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > request > hawk > boom > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-06-15T05:06:08.317Z'
+  'npm:mime:20170907':
+    - feathers > express > send > mime:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers > express > serve-static > send > mime:
+        patched: '2019-06-15T05:06:08.317Z'
+  'npm:moment:20170905':
+    - feathers-authentication > jsonwebtoken > joi > moment:
+        patched: '2019-06-15T05:06:08.317Z'
+    - feathers-authentication-jwt > passport-jwt > jsonwebtoken > joi > moment:
+        patched: '2019-06-15T05:06:08.317Z'
+  'npm:stringstream:20180511':
+    - forever > forever-monitor > chokidar > fsevents > node-pre-gyp > request > stringstream:
+        patched: '2019-06-15T05:06:08.317Z'
