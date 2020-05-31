@@ -1,4 +1,6 @@
-# Config
+_Note: This repository is archived and not being used or maintained._
+
+## Config
 Modify `default.json` for your current desired configuration settings.
 
 ### Key: `"levelup"`
